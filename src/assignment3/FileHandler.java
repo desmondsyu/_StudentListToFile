@@ -1,11 +1,12 @@
 package assignment3;
 
 import java.io.*;
-import java.util.List;
+import java.util.*;
 
 public class FileHandler implements Serializable{
 	
-	public static void writeFile(List data) throws IOException{
+	// method to write a list of byte array to file
+	public static void writeFile(List<byte[]> data) throws IOException{
 		
 		try(
 			ObjectOutputStream output = new ObjectOutputStream(
@@ -15,6 +16,7 @@ public class FileHandler implements Serializable{
 		}
 	}
 	
+	// method to return a list of byte array from file
 	public static List<byte[]> readFile() throws ClassNotFoundException, IOException{
 		
 		try(

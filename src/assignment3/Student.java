@@ -1,7 +1,6 @@
 package assignment3;
 
 import java.io.*;
-import java.util.List;
 
 public class Student implements Serializable{
 	
