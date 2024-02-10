@@ -3,25 +3,26 @@ package assignment3;
 import java.io.*;
 import java.util.List;
 
-public class FileHandler {
+public class FileHandler implements Serializable{
 	
-	public void writeFile(List data) throws IOException{
+	public static void writeFile(List data) throws IOException{
 		
 		try(
 			ObjectOutputStream output = new ObjectOutputStream(
-				new BufferedOutputStream(new FileOutputStream("src/student.dat")));
+					new FileOutputStream("src/student.dat"));
 		) {
 			output.writeObject(data);
 		}
 	}
 	
-	public void readFile() throws ClassNotFoundException, IOException{
+	public static List<byte[]> readFile() throws ClassNotFoundException, IOException{
 		
 		try(
-			ObjectInputStream input = new ObjectInputStream(new FileInputStream("src/student.dat"));
+			ObjectInputStream input = new ObjectInputStream(
+					new FileInputStream("src/student.dat"));
 		) {
-			Student stu = (Student)input.readObject();
-			System.out.println(stu);
+			List<byte[]> data = (List<byte[]>)(input.readObject());
+			return data;
 		}
 	}
 }
