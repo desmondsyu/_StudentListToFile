@@ -62,7 +62,7 @@ public class Student implements Serializable{
 		byteIn.close();
 		objIn.close();
 		// casting the return object
-		return (Student) obj;
+		return (Student)obj;
 	}
 	
 	// toString method printing information of object
