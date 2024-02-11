@@ -59,7 +59,7 @@ public class MainClass {
 				System.out.println("Invalid input");
 			}
 			
-			System.out.println("Input 'exit' to exit");
+			System.out.println("Input 'exit' to exit. Input anything else to continue...");
 			String input = scan.next();
 			
 			if(input.equalsIgnoreCase("exit")) {

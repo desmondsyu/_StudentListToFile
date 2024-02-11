@@ -10,7 +10,7 @@ public class FileHandler implements Serializable{
 		
 		try(
 			ObjectOutputStream output = new ObjectOutputStream(
-					new FileOutputStream("src/student.dat"));
+					new BufferedOutputStream(new FileOutputStream("src/student.dat")));
 		) {
 			output.writeObject(data);
 		}
@@ -21,7 +21,7 @@ public class FileHandler implements Serializable{
 		
 		try(
 			ObjectInputStream input = new ObjectInputStream(
-					new FileInputStream("src/student.dat"));
+					new BufferedInputStream(new FileInputStream("src/student.dat")));
 		) {
 			List<byte[]> data = (List<byte[]>)(input.readObject());
 			return data;
