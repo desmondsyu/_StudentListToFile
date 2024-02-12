@@ -11,18 +11,6 @@ public class MainClass {
 		// create list of byte array
 		List<byte[]> studentList = createStudentList();
 
-//		// create testing student objects
-//		Student stu1 = new Student(1001, "Adam", 85.5);
-//		Student stu2 = new Student(1002, "Bolt", 78.6);
-//		Student stu3 = new Student(1003, "Carl", 91.4);
-//		Student stu4 = new Student(1004, "Dale", 64.2);
-//
-//		// transfer to byte array and add to the list
-//		studentList.add(Student.toByteArray(stu1));
-//		studentList.add(Student.toByteArray(stu2));
-//		studentList.add(Student.toByteArray(stu3));
-//		studentList.add(Student.toByteArray(stu4));
-
 		// write the list to file
 		FileHandler.writeFile(studentList);
 
@@ -52,12 +40,13 @@ public class MainClass {
 				System.out.print("Student gpa: ");
 				stu.setGpa(scan.nextDouble());
 				scan.nextLine();
-
+				
+				// write byte array to the list
 				studentList.add(Student.toByteArray(stu));
 			} catch (InputMismatchException e) {
 				System.out.println("Invalid input");
 			}
-
+			
 			System.out.println("Input 'exit' to exit. Input anything else to continue...");
 			String input = scan.next();
 
