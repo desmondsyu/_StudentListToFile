@@ -47,10 +47,10 @@ public class Student implements Serializable {
 	}
 
 	// method to convert the object to a byte array
-	public static byte[] toByteArray(Student obj) throws IOException {
+	public byte[] toByteArray() throws IOException {
 		ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
 		ObjectOutputStream objOut = new ObjectOutputStream(byteOut);
-		objOut.writeObject(obj);
+		objOut.writeObject(this);
 		return byteOut.toByteArray();
 	}
 

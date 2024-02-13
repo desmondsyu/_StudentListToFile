@@ -42,7 +42,7 @@ public class MainClass {
 				scan.nextLine();
 				
 				// write byte array to the list
-				studentList.add(Student.toByteArray(stu));
+				studentList.add(stu.toByteArray());
 			} catch (InputMismatchException e) {
 				System.out.println("Invalid input");
 			}
