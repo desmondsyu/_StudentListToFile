@@ -1,0 +1,18 @@
+This is a project with Java.
+
+Create a Student class with the following attributes:
+Student ID (int)
+Name (String)
+GPA (double)
+
+Implement a method in the Student class to convert the object to a byte array (toByteArray()) and another method to create a Student object from a byte array (fromByteArray(byte[] data)).
+
+Create a FileHandler class with methods to:
+Write a list of Student objects to a binary file.
+Read a list of Student objects from a binary file.
+
+In the main program:
+Create a list of Student objects.
+Write the list into a binary file.
+Read the list from the binary file.
+Print the information of each student.
